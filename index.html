@@ -3,105 +3,545 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Volvemos Pronto! | Sitio en Mantenimiento</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Estilos personalizados con CSS3 */
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Degradado moderno */
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            overflow: hidden; /* Evita barras de desplazamiento innecesarias */
-        }
-        .maintenance-container {
-            background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
-            border-radius: 15px;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra sutil */
-            backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo (CSS3) */
-            border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
-            max-width: 600px;
-            width: 90%;
-            animation: fadeIn 1s ease-out; /* Animación de entrada */
-        }
-        .maintenance-icon {
-            font-size: 80px;
-            color: #fff;
-            margin-bottom: 20px;
-            animation: bounce 2s infinite; /* Animación de rebote sutil */
-        }
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-        .progress {
-            height: 8px;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-        .progress-bar {
-            background-color: #00ffc8; /* Color de progreso llamativo */
-            animation: progressBarGrow 3s ease-out forwards; /* Animación de la barra */
-        }
-
-        /* Animaciones CSS3 */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-15px); }
-            60% { transform: translateY(-7px); }
-        }
-        @keyframes progressBarGrow {
-            from { width: 0%; }
-            to { width: 75%; } /* Puedes ajustar este valor */
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            p {
-                font-size: 1rem;
-            }
-            .maintenance-icon {
-                font-size: 60px;
-            }
-        }
-    </style>
+    <title>Óptica SmartGlass - Lentes Correctivos, de Sol y de Contacto</title>
+    <meta name="description" content="Óptica especializada en lentes correctivos, de sol y de contacto. Las mejores marcas y servicios profesionales.">
+    <!--<link rel="icon" type="image/x-icon" href="favicon.ico">-->
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="maintenance-container">
-        <div class="maintenance-icon">
-            ⚙️
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand font-display" href="#inicio">
+                Óptica <span class="text-primary">SmartGlass</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <h1>¡Estamos trabajando para ti!</h1>
-        <p>Nuestro sitio web está actualmente en mantenimiento para implementar nuevas y emocionantes características. Agradecemos tu paciencia y comprensión.</p>
-        <p>Volveremos con mejoras increíbles. ¡Permanece atento!</p>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </nav>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title font-display">Óptica <span class="text-primary">SmartGlass</span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
-        <p class="mt-3 text-muted" style="font-size: 0.9rem;">Est. finalización: Próximamente</p>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio" data-bs-dismiss="offcanvas">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#productos" data-bs-dismiss="offcanvas">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicios" data-bs-dismiss="offcanvas">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog" data-bs-dismiss="offcanvas">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto" data-bs-dismiss="offcanvas">Contacto</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section text-white position-relative">
+        <div id="heroCarousel" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100" data-bs-ride="carousel" style="z-index:1;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner w-100 h-100">
+                <div class="carousel-item active h-100">
+                    <img src="img/banner/slider1.webp" class="d-block w-100 h-100" alt="Óptica Visión Dorada">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="img/banner/slider2.webp" class="d-block w-100 h-100" alt="Servicios Profesionales">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="img/banner/slider3.webp" class="d-block w-100 h-100" alt="Marcas Exclusivas">
+                    <div class="carousel-overlay"></div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+        <div class="container position-relative h-100" style="z-index:2;">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center hero-content">
+                    <h1 class="hero-title fade-in-up">Tu Opción Inteligente</h1>
+                    <p class="hero-subtitle fade-in-up">Descubre la mejor selección de lentes correctivos, de sol y de contacto con las marcas más prestigiosas del mercado</p>
+                    <div class="fade-in-up btn-group">
+                        <a href="#productos" class="btn btn-primary btn-lg me-3">
+                            <i class="bi bi-eye me-2"></i>Explorar Productos
+                        </a>
+                        <a href="#contacto" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-calendar-check me-2"></i>Agendar Cita
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section id="productos" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Nuestros Productos</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="img/productos/gafas-de-sol.webp" alt="Lentes de Sol" class="product-img">
+                        <div class="product-content">
+                            <h3>Lentes de Sol</h3>
+                            <p>Protección UV y estilo en cada par.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="img/productos/ACUVUE_contac.webp" alt="Lentes de Contacto" class="product-img">
+                        <div class="product-content">
+                            <h3>Lentes de Contacto</h3>
+                            <p>Comodidad y claridad visual.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="img/productos/armalente.webp" alt="Armzones" class="product-img">
+                        <div class="product-content">
+                            <h3>Monturas</h3>
+                            <p>Estilo y calidad en cada diseño.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcas Section -->
+    <section id="marcas" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Nuestras Marcas</h2>
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="brand-card">
+                        <img src="img/marcas/rayban.webp" alt="Ray-Ban" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="brand-card">
+                        <img src="img/marcas/oakley.webp" alt="Oakley" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="brand-card">
+                        <img src="img/marcas/seey.webp" alt="Maui Jim" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="brand-card">
+                        <img src="img/marcas/palazzo.webp" alt="Persol" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Nuestros Servicios</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="img/servicios/examen.jpg" alt="Examen de la Vista" class="service-img">
+                        <div class="service-content">
+                            <h3>Examen de la Vista</h3>
+                            <p>Evaluación completa de tu salud visual con tecnología de última generación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="img/servicios/lente-contacto.png" alt="Lentes de Contacto" class="service-img">
+                        <div class="service-content">
+                            <h3>Lentes de Contacto</h3>
+                            <p>Amplia selección de lentes de contacto de las mejores marcas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="img/servicios/monturas.webp" alt="Armazones" class="service-img">
+                        <div class="service-content">
+                            <h3>Armazones</h3>
+                            <p>Gran variedad de estilos y marcas para todos los gustos y necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-4 font-display fw-bold mb-4">
+                        Blog y <span class="text-primary">Novedades</span>
+                    </h2>
+                    <p class="lead text-muted">Mantente informado con nuestros artículos y consejos</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <article class="card blog-card h-100">
+                        <div class="blog-image">
+                            <i class="bi bi-sunglasses fs-1"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-calendar3 text-primary me-2"></i>
+                                <small class="text-muted">28 de Mayo, 2025</small>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Cómo elegir los lentes de sol perfectos</h3>
+                            <p class="text-muted mb-3">Guía completa para seleccionar la protección solar ideal según tu rostro y actividades.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Leer Más</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="card blog-card h-100">
+                        <div class="blog-image">
+                            <i class="bi bi-eyeglasses fs-1"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-calendar3 text-primary me-2"></i>
+                                <small class="text-muted">25 de Mayo, 2025</small>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Tendencias en monturas 2025</h3>
+                            <p class="text-muted mb-3">Descubre los estilos que marcarán tendencia este año en el mundo de la óptica.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Leer Más</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="card blog-card h-100">
+                        <div class="blog-image">
+                            <i class="bi bi-eye fs-1"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-calendar3 text-primary me-2"></i>
+                                <small class="text-muted">5 de Mayo, 2025</small>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Cuidados para lentes de contacto</h3>
+                            <p class="text-muted mb-3">Tips esenciales para mantener tus lentes de contacto en perfecto estado.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Leer Más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-4 font-display fw-bold mb-4">
+                        Síguenos en <span class="text-primary">Instagram</span>
+                    </h2>
+                    <p class="lead text-muted">
+                        <i class="bi bi-instagram me-2"></i>
+                        @smartglassve
+                    </p>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="instagram-post">
+                        <i class="bi bi-instagram fs-3"></i>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="instagram-post">
+                        <i class="bi bi-camera fs-3"></i>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="instagram-post">
+                        <i class="bi bi-heart fs-3"></i>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="instagram-post">
+                        <i class="bi bi-star fs-3"></i>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="instagram-post">
+                        <i class="bi bi-image fs-3"></i>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="instagram-post">
+                        <i class="bi bi-plus-circle fs-3"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section section-padding text-white position-relative">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 font-display fw-bold mb-4">Mantente Actualizado</h2>
+                    <p class="lead mb-4">Recibe las últimas novedades, promociones exclusivas y consejos de cuidado visual</p>
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-6">
+                            <div class="input-group input-group-lg">
+                                <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="bi bi-envelope-check me-2"></i>Suscribirse
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-4 font-display fw-bold mb-4">Contáctanos</h2>
+                    <p class="lead text-muted">Estamos aquí para ayudarte con todas tus necesidades visuales</p>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="h-100">
+                        <h3 class="h4 fw-bold mb-4">Información de Contacto</h3>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Dirección</h5>
+                                <p class="text-muted mb-0">Av. Francisco de Miranda entre calles 2 y 3 al lado de Mis Telas, dioagonal a la Panificadora El Tigre<br>El Tigre, Anzoategui ZP 6050</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Teléfonos</h5>
+                                <p class="text-muted mb-0">+58(412)4019942<br></p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Email</h5>
+                                <p class="text-muted mb-0">info@opticasmartglass.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Horarios</h5>
+                                <p class="text-muted mb-0">
+                                    Lun - Vie: 9:00 AM - 1:00 / 3:00 AM - 6:00 PM<br>
+                                    Sáb: 9:00 AM - 1:00 PM<br>
+                                    Dom: Cerrado
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4">
+                            <h3 class="h4 fw-bold mb-4">Envíanos un Mensaje</h3>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label fw-semibold">Nombre completo</label>
+                                        <input type="text" class="form-control form-control-lg" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label fw-semibold">Correo electrónico</label>
+                                        <input type="email" class="form-control form-control-lg" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="phone" class="form-label fw-semibold">Teléfono</label>
+                                        <input type="tel" class="form-control form-control-lg" id="phone">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label fw-semibold">Asunto</label>
+                                        <input type="text" class="form-control form-control-lg" id="subject" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label fw-semibold">Mensaje</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Describe tu consulta o requerimiento..." required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                                            <i class="bi bi-send me-2"></i>Enviar Mensaje
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section text-white">
+        <div class="container">
+            <div class="row g-4 py-5">
+                <div class="col-lg-4">
+                    <h3 class="font-display fw-bold mb-4">Óptica <span class="text-primary">SmartGlass</span></h3>
+                    <p class="mb-4">Expertos en el ramo óptico desde 1998 <br>Tu óptica de confianza con más de 20 años de experiencia brindando soluciones visuales de calidad.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link me-2" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link me-2" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4 text-primary">Contacto</h5>
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>
+                            <span>Av. Francisco de Miranda entre calles 2 y 3 al lado de Mis Telas, dioagonal a la Panificadora El Tigre<br>El Tigre, Anzoategui ZP 6050</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            <span>+58(412)4019942</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-envelope me-2"></i>
+                            <span>info@smartglass.com</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4 text-primary">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#productos" class="text-white-50 text-decoration-none">Productos</a></li>
+                        <li class="mb-2"><a href="#servicios" class="text-white-50 text-decoration-none">Servicios</a></li>
+                        <li class="mb-2"><a href="#blog" class="text-white-50 text-decoration-none">Blog</a></li>
+                        <li><a href="#contacto" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4 text-primary">Horarios</h5>
+                    <p class="mb-1">Lunes a Viernes</p>
+                    <p class="text-white-50 mb-3">9:00 AM - 1:00 PM<br>  3:00 PM - 6:00 PM</p>
+                    <p class="mb-1">Sábados</p>
+                    <p class="text-white-50 mb-3">9:00 AM - 1:00 PM</p>
+                    <p class="mb-1">Domingos</p>
+                    <p class="text-white-50">Cerrado</p>
+                </div>
+            </div>
+            
+            <hr class="border-secondary">
+            
+            <div class="row py-4">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white-50">&copy; 2025 Óptica SmartGlass. Todos los derechos reservados.<br> Diseñado por GrayfallDev</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-white-50">Diseñado con <i class="bi bi-heart-fill text-primary"></i> para tu visión</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>
