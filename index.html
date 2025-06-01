@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Volvemos Pronto! | Sitio en Mantenimiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados con CSS3 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Degradado moderno */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Evita barras de desplazamiento innecesarias */
+        }
+        .maintenance-container {
+            background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+            backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo (CSS3) */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+            max-width: 600px;
+            width: 90%;
+            animation: fadeIn 1s ease-out; /* Animación de entrada */
+        }
+        .maintenance-icon {
+            font-size: 80px;
+            color: #fff;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite; /* Animación de rebote sutil */
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .progress {
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .progress-bar {
+            background-color: #00ffc8; /* Color de progreso llamativo */
+            animation: progressBarGrow 3s ease-out forwards; /* Animación de la barra */
+        }
+
+        /* Animaciones CSS3 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-7px); }
+        }
+        @keyframes progressBarGrow {
+            from { width: 0%; }
+            to { width: 75%; } /* Puedes ajustar este valor */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .maintenance-icon {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <div class="maintenance-icon">
+            ⚙️
+        </div>
+        <h1>¡Estamos trabajando para ti!</h1>
+        <p>Nuestro sitio web está actualmente en mantenimiento para implementar nuevas y emocionantes características. Agradecemos tu paciencia y comprensión.</p>
+        <p>Volveremos con mejoras increíbles. ¡Permanece atento!</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-3 text-muted" style="font-size: 0.9rem;">Est. finalización: Próximamente</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
